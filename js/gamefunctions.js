@@ -1,9 +1,18 @@
 import { GameUser } from './gameuser.js'
 import { getHighScoreList, updateHighScoreList } from './firebase.js';
 
-import rockImg from '../media/rock.png';
+/* import rockImg from '../media/rock.png';
 import paperImg from '../media/paper.png';
-import scissorsImg from '../media/scissors.png';
+import scissorsImg from '../media/scissors.png'; 
+
+Jag är tvungen att redigera img.src så det är anpassat efter Pages 
+
+Annars får jag meddelandet:
+
+Skript från “https://purpledusty.github.io/JAVA22-avjs-mp1-bjorn-bergstrom/media/rock.png” 
+blockerades på grund av en otillåten MIME-typ (“image/png”).
+
+*/
 
 export class GameFunctions {
 
@@ -62,13 +71,13 @@ export class GameFunctions {
 
 		switch (equipment) {
 			case 'rock':
-				img.src = rockImg;
+				img.src = 'https://purpledusty.github.io/JAVA22-avjs-mp1-bjorn-bergstrom/media/rock.png';
 				break;
 			case 'paper':
-				img.src = paperImg;
+				img.src = 'https://purpledusty.github.io/JAVA22-avjs-mp1-bjorn-bergstrom/media/paper.png';
 				break;
 			case 'scissors':
-				img.src = scissorsImg;
+				img.src = 'https://purpledusty.github.io/JAVA22-avjs-mp1-bjorn-bergstrom/media/scissors.png';
 				break;
 			default:
 				console.error('Invalid equipment:', equipment);
